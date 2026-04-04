@@ -1,25 +1,15 @@
-# ReasonX — Intrinsic Judge
+<div align="center">
+<h1>ReasonX - Intrinsic Judge</h1>
 
-Training, data generation, and evaluation code for the MLLM intrinsic judge from
-**[ReasonX: MLLM-Guided Intrinsic Image Decomposition](https://arxiv.org/abs/2512.04222)** (CVPR 2026). The judge is fine-tuned from [InternVL2.5-4B](https://huggingface.co/OpenGVLab/InternVL2_5-4B) via LoRA to make pairwise relative intrinsic comparisons (depth, surface normals, albedo, irradiance) between two marked points on an RGB image. 
+<a href="https://arxiv.org/abs/2512.04222"><img src="https://img.shields.io/badge/arXiv-2512.04222-b31b1b" alt="arXiv"></a>
+<a href="https://huggingface.co/adirik/InternVL2_5-4B-Intrinsic-Judge"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Checkpoint-orange" alt="HuggingFace"></a>
 
+**[Alara Dirik](https://alaradirik.github.io)**, **[Tuanfeng Wang](https://tuanfeng.github.io)**, **[Duygu Ceylan](https://www.duygu-ceylan.com)**, **[Stefanos Zafeiriou](https://wp.doc.ic.ac.uk/szafeiri//)**, **[Anna Fruehstueck](https://annafruehstueck.github.io)**
 
-The training code under `internvl_chat/` is adapted from [InternVL](https://github.com/OpenGVLab/InternVL).
+<img src="examples/judge_teaser.png" width="540">
+</div>
 
-```
-.
-├── infer.py                            # single-image inference (no ground truth needed)
-├── generate_intrinsic_judgements.py    # reference data pipeline: RGB and intrinsic PNGs -> training JSONL
-├── evaluate_intrinsic_judge.py         # evaluation (accuracy & F1)
-├── requirements.txt
-├── internvl_chat/
-│   ├── internvl/                       # InternVL training module
-│   ├── merge_lora.py                   # merge LoRA weights into base model
-│   └── shell/                          # training scripts & dataset config
-├── examples/
-│   └── sample_data/                    # 5 sample scenes for testing the pipeline
-└── LICENSE
-```
+Training, data generation, and evaluation code for the MLLM intrinsic judge from **ReasonX: MLLM-Guided Intrinsic Image Decomposition** (CVPR 2026). Fine-tuned from [InternVL2.5-4B](https://huggingface.co/OpenGVLab/InternVL2_5-4B) via LoRA to make pairwise relative intrinsic comparisons (depth, surface normals, albedo, irradiance) between two marked points on an RGB image. The training code under `internvl_chat/` is adapted from [InternVL](https://github.com/OpenGVLab/InternVL).
 
 ## Setup
 
@@ -30,11 +20,9 @@ pip install -r requirements.txt
 pip install flash-attn==2.3.6 --no-build-isolation   # recommended
 ```
 
-**Checkpoint link:** [adirik/InternVL2_5-4B-Intrinsic-Judge](https://huggingface.co/adirik/InternVL2_5-4B-Intrinsic-Judge) 
-
 ## Inference
 
-You can test the released judge on any RGB image without  ground truth intrinsics:
+Test the released judge on any RGB image without ground truth intrinsics:
 
 ```bash
 # pre-annotated image (red/green markers already drawn):
