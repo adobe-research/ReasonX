@@ -1,0 +1,9 @@
+{
+  "intrinsic_judgment_train": {
+    "root": "../data/intrinsic_judgements/",
+    "annotation": "../data/intrinsic_judgements/intrinsic_judgement_train.jsonl",
+    "data_augment": false,
+    "repeat_time": 5,
+    "length": 200000
+  }
+}
