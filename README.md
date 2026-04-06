@@ -4,7 +4,9 @@
 <a href="https://arxiv.org/abs/2512.04222"><img src="https://img.shields.io/badge/arXiv-2512.04222-b31b1b" alt="arXiv"></a>
 <a href="https://huggingface.co/adirik/InternVL2_5-4B-Intrinsic-Judge"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Checkpoint-orange" alt="HuggingFace"></a>
 
-**[Alara Dirik](https://alaradirik.github.io)**, **[Tuanfeng Wang](https://tuanfeng.github.io)**, **[Duygu Ceylan](https://www.duygu-ceylan.com)**, **[Stefanos Zafeiriou](https://wp.doc.ic.ac.uk/szafeiri//)**, **[Anna Fruehstueck](https://annafruehstueck.github.io)**
+**[Alara Dirik](https://alaradirik.github.io)**, **[Tuanfeng Wang](https://tuanfeng.github.io)**, **[Duygu Ceylan](https://www.duygu-ceylan.com)**, **[Stefanos Zafeiriou](https://wp.doc.ic.ac.uk/szafeiri//)**, **[Anna Frühstück](https://annafruehstueck.github.io)**
+
+<sup>*</sup>Work performed in-part while an intern at Adobe Research.
 
 <img src="examples/judge_teaser.png" width="540">
 </div>
@@ -143,4 +145,4 @@ python evaluate_intrinsic_judge.py \
 
 ## License
 
-This project is released under the MIT License. The InternVL training code (`internvl_chat/`) is subject to its [original license](https://github.com/OpenGVLab/InternVL/blob/main/LICENSE).
+The InternVL training code and released MLLM judge checkpoint (`internvl_chat/`) remains subject to the [InternVL license](https://github.com/OpenGVLab/InternVL/blob/main/LICENSE). The rest of the repository is released under the [LICENSE](LICENSE.md).
