@@ -17,7 +17,7 @@ Training, data generation, and evaluation code for the MLLM intrinsic judge from
 
 ```bash
 git clone https://github.com/adobe-research/ReasonX.git
-cd internvl-rgbx-judge
+cd ReasonX
 pip install -r requirements.txt
 pip install flash-attn==2.3.6 --no-build-isolation   # recommended
 ```
@@ -28,7 +28,7 @@ Test the released judge on any RGB image without ground truth intrinsics:
 
 ```bash
 # pre-annotated image (red/green markers already drawn):
-python infer.py --image annotated.png \
+python infer.py --image examples/annotated.png \
     --question "Which point appears to be closer to the camera - red or green?"
 
 # plain image + point coordinates (markers drawn automatically):
